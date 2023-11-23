@@ -8,6 +8,7 @@ interface IIndexToken is IERC20 {
     function setup(uint256[] memory initAmounts, uint256 initialMintAmount) external;
     function updateWeightUpdater(address updater) external;
     function getTokens() external view returns(address[] memory _tokens);
+    function weights(address token) external view returns(UD60x18);
     function updateWeights(uint256[] memory _weights) external;
     function tokensLength() external view returns(uint256);
     function mintAmount(
